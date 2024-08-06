@@ -1,20 +1,32 @@
-Gaussian Blur Filter
-This project contains a Python code that applies a Gaussian blur filter on an image using OpenCV and NumPy. Gaussian blurring is a widely used technique in image processing and computer vision applications.
+Depth Estimation using MiDaS Model
+This project utilizes the MiDaS model to perform depth estimation from a single camera input. MiDaS is a deep learning-based model capable of generating depth maps from images.
 
-Requirements
-To run this project, you need to have the following libraries installed:
+Required Libraries
+The project requires the following Python libraries:
 
-OpenCV
-NumPy
-Matplotlib
-You can install these libraries using the following pip commands:
-   pip install opencv-python numpy matplotlib
+torch
+cv2 (OpenCV)
+numpy
+matplotlib
+You can install the required libraries using the following command:
+   pip install torch opencv-python numpy matplotlib
 
 Usage
-Clone or download this project to your computer.
-Place an image file named lenna.png in the root directory of the project.
-Run the code to apply the Gaussian blur filter
-As a result, the original image and the image with the Gaussian blur applied will be displayed in two separate windows.
+Update the model_type variable at the beginning of the code with the model type you wish to use.
+Set the path for the image you want to analyze in the img variable
+Run the Python script.
 
-Contributing
-If you would like to contribute, feel free to create a pull request. You can also open an issue for any bugs or suggestions.
+Output
+When executed, the code will display the depth map predicted from the input image using the plasma colormap.
+
+Example Output
+When the code is run, a depth map similar to the following will be displayed:
+
+ (An example image can be added)
+
+Notes
+The code checks for GPU availability and utilizes it if available.
+The image is resized according to the dimensions returned from the model prediction.
+
+License
+Please check the MiDaS license when using this project.
